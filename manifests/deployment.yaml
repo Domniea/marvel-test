@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: marvel
+spec:
+  selector:
+    matchLabels:
+      app: marvel
+  template:
+    metadata:
+      name: marvel
+      labels:
+        app: marvel
+    spec:
+      containers:
+      - name: noobernetes-container
+        image: noobernetes:hello-world
+        env:
+        - name: POD_NAME
+          valueFrom:
+            fieldRef:
+              fieldPath: metadata.name
+        - name: SUPER_SECRET
+          value: "This is my secret string"
+      restartPolicy: Always
