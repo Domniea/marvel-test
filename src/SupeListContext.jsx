@@ -41,6 +41,27 @@ function SupeListProvider(props) {
             .catch(error => console.log(error))
     }, [])
 
+
+    //test
+    // const arr = ['brain', 'adam', 'nelson', 'adam w']
+    // console.log(arr[3])
+
+    // const items = arr.map(name => {
+    //     return console.log( name + ' is awesome')
+    // })
+
+    const numbers = [1, 2, 3, 4, 5]
+
+    const red = numbers.reduce((acc, num)  => {
+       let final =  acc +  num
+       console.log(final, i)
+       return final 
+    }, 0)
+
+    console.log(red)
+
+    //end
+
     return (
         <SupeList.Provider value={mainList} >
             {props.children}
