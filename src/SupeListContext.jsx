@@ -50,16 +50,6 @@ function SupeListProvider(props) {
     //     return console.log( name + ' is awesome')
     // })
 
-    const numbers = [1, 2, 3, 4, 5]
-
-    const red = numbers.reduce((acc, num)  => {
-       let final =  acc +  num
-       console.log(final, i)
-       return final 
-    }, 0)
-
-    console.log(red)
-
     //end
 
     return (
