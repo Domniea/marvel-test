@@ -8,7 +8,7 @@ function SupeMovieListProvider(props) {
     const [movieList, setMovieList] = useState('')
 
     useEffect(() => {
-        axios.get('https://mcuapi.up.railway.app/api/v1/moviess')
+        axios.get('https://mcuapi.up.railway.app/api/v1/movies')
             .then(results => {
                 setMovieList(results.data.data)
             })
